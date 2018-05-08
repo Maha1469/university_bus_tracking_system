@@ -1,0 +1,17 @@
+class CreateBuses < ActiveRecord::Migration[5.0]
+  def change
+    create_table :buses do |t|
+      t.float :current_lat
+      t.float :current_lan
+      t.text :description
+      t.time :evening_start_time
+      t.time :evening_end_time
+      t.time :morning_start_time
+      t.time :morning_end_time
+      t.boolean :status, default: true
+      t.integer :user_id
+
+      t.timestamps
+    end
+  end
+end

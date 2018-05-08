@@ -1,0 +1,57 @@
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+    <div class="jumbotron">
+      <%= form_for(bus) do |f| %>
+        <% if bus.errors.any? %>
+          <div class="form-group alert alert-error alert-block" id="error_explanation">
+            <button type="button" class="close" data-dismiss="alert">x</button>
+            <% bus.errors.full_messages.each do |message| %>
+              <h6 class="heading_error"><%= message%></h6>
+            <% end %>
+          </div>
+        <% end %>
+
+        <div class="form-group">
+          <%= f.label :current_lat %>
+          <%= f.number_field :current_lat, class:"form-control", step:"0.00000000001" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :current_lan %>
+          <%= f.number_field :current_lan, class:"form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :evening_start_time %><br>
+          <%= f.time_select :evening_start_time,{prompt: true}, {class:"form-control", style:"font-size: 0.9em;width:49.5%;display:inline-block;", required: true}%>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :evening_end_time %><br>
+          <%= f.time_select :evening_end_time,{prompt: true}, {class:"form-control", style:"font-size: 0.9em;width:49.5%;display:inline-block;", required: true}%>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :morning_start_time %><br>
+          <%= f.time_select :morning_start_time,{prompt: true}, {class:"form-control", style:"font-size: 0.9em;width:49.5%;display:inline-block;", required: true}%>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :morning_end_time %><br>
+          <%= f.time_select :morning_end_time,{prompt: true}, {class:"form-control", style:"font-size: 0.9em;width:49.5%;display:inline-block;", required: true}%>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :description %>
+          <%= f.text_area :description, class:"form-control", style:"resize:none;", rows:3 %>
+        </div>
+
+        <div class="form-group">
+          <%= f.submit class:"btn btn-success btn-block" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-md-1"></div>
+</div>
