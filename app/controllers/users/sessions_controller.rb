@@ -8,10 +8,13 @@ class Users::SessionsController < Devise::SessionsController
   #   super
   # end
 
-  # POST /resource/sign_in
-  # def create
-  #   super
-  # end
+  def create
+    super
+    if current_user.role != 0
+      sign_out :user
+      flash[:notice] = "Your are not authorize to sign-in here."
+    end
+  end
 
   # DELETE /resource/sign_out
   # def destroy

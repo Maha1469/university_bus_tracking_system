@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :buses
-  devise_for :users
+  devise_for :users, path: 'users', controllers: { sessions: 'users/sessions'}
   resources :homes
 
   root 'homes#index'

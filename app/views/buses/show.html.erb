@@ -1,49 +1,127 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Current lat:</strong>
-  <%= @bus.current_lat %>
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jumbotron">
+        <div class="row">
+          <div class="col-md-12"><center><h2>Bus Detail</h2></center></div>
+        </div>
 
-<p>
-  <strong>Current lan:</strong>
-  <%= @bus.current_lan %>
-</p>
+        <div class="row">
+          <div class="col-md-6">
+            <label class="my_label">Driver Email:</label>
+          </div>
+          <div class="col-md-6">
+            <label class="my_value"> <%= @bus.user.email %> </label>
+          </div>
+        </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @bus.description %>
-</p>
+        <div class="row">
+          <div class="col-md-6">
+            <label class="my_label">Bus Number:</label>
+          </div>
+          <div class="col-md-6">
+            <label class="my_value"> <%= @bus.bus_number %> </label>
+          </div>
+        </div>
 
-<p>
-  <strong>Evening start time:</strong>
-  <%= @bus.evening_start_time %>
-</p>
+        <div class="row">
+          <div class="col-md-6">
+            <label class="my_label">Current Longitude:</label>
+          </div>
+          <div class="col-md-6">
+            <label class="my_value"> <%= @bus.current_lan %> </label>
+          </div>
+        </div>
 
-<p>
-  <strong>Evening end time:</strong>
-  <%= @bus.evening_end_time %>
-</p>
+        <div class="row">
+          <div class="col-md-6">
+            <label class="my_label">Current Latitude:</label>
+          </div>
+          <div class="col-md-6">
+            <label class="my_value"> <%= @bus.current_lat %> </label>
+          </div>
+        </div>
 
-<p>
-  <strong>Morning start time:</strong>
-  <%= @bus.morning_start_time %>
-</p>
+        <div class="row">
+          <div class="col-md-6">
+            <label class="my_label">Bus Status:</label>
+          </div>
+          <div class="col-md-6">
+            <% if @bus.status%>
+              <label class="my_value"> Active</label>
+            <%else%>
+              <label class="my_value"> Un-Active</label>
+            <%end%>
+          </div>
+        </div>
 
-<p>
-  <strong>Morning:</strong>
-  <%= @bus.morning_end_time %>
-</p>
+        <div class="row">
+          <div class="col-md-6">
+            <label class="my_label">Morning Start Time:</label>
+          </div>
+          <div class="col-md-6">
+            <% @mst = @bus.morning_start_time.to_s %>
+            <% @mst = @mst.tr('UTC', '')%>
+            <label class="my_value"> <%= @mst %> </label>
+          </div>
+        </div>
 
-<p>
-  <strong>Status:</strong>
-  <%= @bus.status %>
-</p>
+        <div class="row">
+          <div class="col-md-6">
+            <label class="my_label">Morning End Time:</label>
+          </div>
+          <div class="col-md-6">
+            <% @met = @bus.morning_end_time.to_s %>
+            <% @met = @met.tr('UTC', '')%>
+            <label class="my_value"> <%= @met %> </label>
+          </div>
+        </div>
 
-<p>
-  <strong>User:</strong>
-  <%= @bus.user_id %>
-</p>
+        <div class="row">
+          <div class="col-md-6">
+            <label class="my_label">Evening Start Time:</label>
+          </div>
+          <div class="col-md-6">
+            <% @est = @bus.evening_start_time.to_s %>
+            <% @est = @est.tr('UTC', '')%>
+            <label class="my_value"> <%= @est %> </label>
+          </div>
+        </div>
 
-<%= link_to 'Edit', edit_bus_path(@bus) %> |
-<%= link_to 'Back', buses_path %>
+        <div class="row">
+          <div class="col-md-6">
+            <label class="my_label">Evening End Time:</label>
+          </div>
+          <div class="col-md-6">
+            <% @eet = @bus.evening_end_time.to_s %>
+            <% @eet = @eet.tr('UTC', '')%>
+            <label class="my_value"> <%= @eet %> </label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <label class="my_label">Description:</label>
+          </div>
+          <div class="col-md-6">
+            <label class="my_value"> <%= @bus.description %> </label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+          </div>
+          <div class="col-md-3">
+            <%= link_to 'Edit', edit_bus_path(@bus), class:"btn btn-warning btn-block" %>
+          </div>
+          <div class="col-md-3">
+            <%= link_to 'Back', buses_path, class:"btn btn-block btn-info"%>
+          </div>
+          <div class="col-md-3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

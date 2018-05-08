@@ -14,25 +14,40 @@ class BusesController < ApplicationController
 
   # GET /buses/new
   def new
+    @user = User.new
     @bus = Bus.new
   end
 
   # GET /buses/1/edit
   def edit
+    @bus = Bus.find(params[:id])
+    @user = User.find(@bus.user_id)
   end
 
   # POST /buses
   # POST /buses.json
   def create
     @bus = Bus.new(bus_params)
-
-    respond_to do |format|
-      if @bus.save
-        format.html { redirect_to @bus, notice: 'Bus was successfully created.' }
-        format.json { render :show, status: :created, location: @bus }
-      else
+    @user = User.new
+    @user.email = params[:bus][:email]
+    @user.password = params[:bus][:password]
+    @user.password_confirmation = params[:bus][:password_confirmation]
+    @user.role = 1
+    if @user.save
+      @bus.user_id = @user.id
+      respond_to do |format|
+        if @bus.save
+          format.html { redirect_to buses_path, notice: 'Bus was successfully created.' }
+          format.json { render :show, status: :created, location: @bus }
+        else
+          format.html { render :new }
+          format.json { render json: @bus.errors, status: :unprocessable_entity }
+        end
+      end
+    else
+      respond_to do |format|
         format.html { render :new }
-        format.json { render json: @bus.errors, status: :unprocessable_entity }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -69,6 +84,6 @@ class BusesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def bus_params
-      params.require(:bus).permit(:current_lat, :current_lan, :description, :evening_start_time, :evening_end_time, :morning_start_time, :morning_end_time, :status, :user_id)
+      params.require(:bus).permit(:bus_number, :email, :password,  :password_confirmation, :current_lat, :current_lan, :description, :evening_start_time, :evening_end_time, :morning_start_time, :morning_end_time, :status, :user_id)
     end
 end

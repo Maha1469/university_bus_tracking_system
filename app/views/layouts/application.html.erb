@@ -12,17 +12,6 @@
   </head>
 
   <body>
-    <div class="row" style="z-index: 9999999;">
-      <% if notice %>
-        <div id="notice_wrapper" class="my_notice">
-          <center><p class="app_notice"><%= notice %></p></center>
-        </div>
-      <%elsif alert %>
-        <div id="notice_wrapper" class="my_alert">
-          <center><p class="app_alert"><%= alert %></p></center>
-        </div>
-      <% end %>
-    </div>
     <div class="container-fluid">
       <%if user_signed_in? %>
       <div class="wrapper">
@@ -72,12 +61,53 @@
                   </div>
               </div>
           </nav>
+          <div class="row" style="z-index: 9999999;">
+            <% if notice %>
+              <div id="notice_wrapper" class="my_notice">
+                <center><p class="app_notice"><%= notice %></p></center>
+              </div>
+            <%elsif alert %>
+              <div id="notice_wrapper" class="my_alert">
+                <center><p class="app_alert"><%= alert %></p></center>
+              </div>
+            <% end %>
+          </div>
           <%= yield%>
         </div>
       </div>
       <div class="overlay"></div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script>
+        $(document).ready(function(){
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#dismiss, .overlay').on('click', function () {
+                $('#sidebar').removeClass('active');
+                $('.overlay').fadeOut();
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').addClass('active');
+                $('.overlay').fadeIn();
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+      </script>
       <%else%>
+        <div class="row" style="z-index: 9999999;">
+          <% if notice %>
+            <div id="notice_wrapper" class="my_notice">
+              <center><p class="app_notice"><%= notice %></p></center>
+            </div>
+          <%elsif alert %>
+            <div id="notice_wrapper" class="my_alert">
+              <center><p class="app_alert"><%= alert %></p></center>
+            </div>
+          <% end %>
+        </div>
         <%= yield %>
       <%end%>
     </div>

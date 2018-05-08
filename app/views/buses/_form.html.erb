@@ -3,6 +3,14 @@
   <div class="col-md-10">
     <div class="jumbotron">
       <%= form_for(bus) do |f| %>
+        <% if @user.errors.any? %>
+          <div class="form-group alert alert-error alert-block" id="error_explanation">
+            <button type="button" class="close" data-dismiss="alert">x</button>
+            <% @user.errors.full_messages.each do |message| %>
+              <h6 class="heading_error"><%= message%></h6>
+            <% end %>
+          </div>
+        <% end %>
         <% if bus.errors.any? %>
           <div class="form-group alert alert-error alert-block" id="error_explanation">
             <button type="button" class="close" data-dismiss="alert">x</button>
@@ -11,41 +19,77 @@
             <% end %>
           </div>
         <% end %>
+        <div class="row" style="border: 2px solid #333">
+          <div class="col-md-12">
+            <center><h3>Registration for Driver</h3></center>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control" %>
+            </div>
 
-        <div class="form-group">
-          <%= f.label :current_lat %>
-          <%= f.number_field :current_lat, class:"form-control", step:"0.00000000001" %>
+            <div class="form-group">
+              <%= f.label :password %>
+              <%= f.password_field :password, autocomplete: "off", class:"form-control" %>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :password_confirmation %><br />
+              <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control"%>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row" style="border: 2px solid #333">
+          <div class="col-md-12">
+            <center><h3>Driver's Bus Detail</h3></center>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <%= f.label :bus_number %>
+              <%= f.text_field :bus_number, class:"form-control" %>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :current_lat %>
+              <%= f.number_field :current_lat, class:"form-control", step:"0.00000000001" %>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :current_lan %>
+              <%= f.number_field :current_lan, class:"form-control", step:"0.00000000001" %>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :evening_start_time %><br>
+              <%= f.time_select :evening_start_time,{prompt: true}, {class:"form-control", style:"font-size: 0.9em;width:49.5%;display:inline-block;", required: true}%>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :evening_end_time %><br>
+              <%= f.time_select :evening_end_time,{prompt: true}, {class:"form-control", style:"font-size: 0.9em;width:49.5%;display:inline-block;", required: true}%>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :morning_start_time %><br>
+              <%= f.time_select :morning_start_time,{prompt: true}, {class:"form-control", style:"font-size: 0.9em;width:49.5%;display:inline-block;", required: true}%>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :morning_end_time %><br>
+              <%= f.time_select :morning_end_time,{prompt: true}, {class:"form-control", style:"font-size: 0.9em;width:49.5%;display:inline-block;", required: true}%>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :description %>
+              <%= f.text_area :description, class:"form-control", style:"resize:none;", rows:3 %>
+            </div>
+          </div>
         </div>
 
-        <div class="form-group">
-          <%= f.label :current_lan %>
-          <%= f.number_field :current_lan, class:"form-control" %>
-        </div>
+        <br>
 
-        <div class="form-group">
-          <%= f.label :evening_start_time %><br>
-          <%= f.time_select :evening_start_time,{prompt: true}, {class:"form-control", style:"font-size: 0.9em;width:49.5%;display:inline-block;", required: true}%>
-        </div>
-
-        <div class="form-group">
-          <%= f.label :evening_end_time %><br>
-          <%= f.time_select :evening_end_time,{prompt: true}, {class:"form-control", style:"font-size: 0.9em;width:49.5%;display:inline-block;", required: true}%>
-        </div>
-
-        <div class="form-group">
-          <%= f.label :morning_start_time %><br>
-          <%= f.time_select :morning_start_time,{prompt: true}, {class:"form-control", style:"font-size: 0.9em;width:49.5%;display:inline-block;", required: true}%>
-        </div>
-
-        <div class="form-group">
-          <%= f.label :morning_end_time %><br>
-          <%= f.time_select :morning_end_time,{prompt: true}, {class:"form-control", style:"font-size: 0.9em;width:49.5%;display:inline-block;", required: true}%>
-        </div>
-
-        <div class="form-group">
-          <%= f.label :description %>
-          <%= f.text_area :description, class:"form-control", style:"resize:none;", rows:3 %>
-        </div>
 
         <div class="form-group">
           <%= f.submit class:"btn btn-success btn-block" %>

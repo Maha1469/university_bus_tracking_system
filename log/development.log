@@ -1652,3 +1652,2636 @@ Processing by BusesController#edit as HTML
 Completed 200 OK in 305ms (Views: 285.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:03:45 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomesController#index as HTML
+Completed 401 Unauthorized in 133ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-08 12:03:59 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (260.2ms)
+Completed 200 OK in 1780ms (Views: 1748.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-05-08 12:04:08 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+B03ZMr+sbDgZJKPT9AQPdE56XseCWTOM7Z9UEC6BpRf0K02RrmRA9x49mqDKKMDSRJX2NFG00rt2XV+rY3EIg==", "user"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"LOG-IN"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "admin@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-05-08 19:04:09.357439"], ["last_sign_in_at", "2018-05-06 19:16:24.482907"], ["sign_in_count", 4], ["updated_at", "2018-05-08 19:04:09.361443"], ["id", 1]]
+  [1m[35m (206.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1674ms (ActiveRecord: 209.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:04:09 -0700
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 513ms (Views: 486.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/buses/new" for 127.0.0.1 at 2018-05-08 12:07:49 -0700
+Processing by BusesController#new as HTML
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+  Rendering buses/new.html.erb within layouts/application
+  Rendered buses/_form.html.erb (4.0ms)
+  Rendered buses/new.html.erb within layouts/application (27.3ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 573ms (Views: 521.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/buses/new" for 127.0.0.1 at 2018-05-08 12:08:54 -0700
+Processing by BusesController#new as HTML
+  Rendering buses/new.html.erb within layouts/application
+  Rendered buses/_form.html.erb (19.0ms)
+  Rendered buses/new.html.erb within layouts/application (37.0ms)
+Completed 500 Internal Server Error in 161ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `email' for #<Bus:0xb4c8e38>):
+    14: 
+    15:         <div class="form-group">
+    16:           <%= f.label :email %><br />
+    17:           <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control" %>
+    18:         </div>
+    19: 
+    20:         <div class="form-group">
+  
+app/views/buses/_form.html.erb:17:in `block in _app_views_buses__form_html_erb__432951734_94749732'
+app/views/buses/_form.html.erb:5:in `_app_views_buses__form_html_erb__432951734_94749732'
+app/views/buses/new.html.erb:5:in `_app_views_buses_new_html_erb__305179375_94772940'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1526.0ms)
+Started GET "/buses/new" for 127.0.0.1 at 2018-05-08 12:09:37 -0700
+Processing by BusesController#new as HTML
+  Rendering buses/new.html.erb within layouts/application
+  Rendered buses/_form.html.erb (211.1ms)
+  Rendered buses/new.html.erb within layouts/application (229.2ms)
+Completed 500 Internal Server Error in 331ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0xae57348>:0xb287680>):
+    2:   <div class="col-md-1"></div>
+    3:   <div class="col-md-10">
+    4:     <div class="jumbotron">
+    5:       <%= form_for(user) do |f| %>
+    6:         <% if user.errors.any? %>
+    7:           <div class="form-group alert alert-error alert-block" id="error_explanation">
+    8:             <button type="button" class="close" data-dismiss="alert">x</button>
+  
+app/views/buses/_form.html.erb:5:in `_app_views_buses__form_html_erb__432951734_93579588'
+app/views/buses/new.html.erb:5:in `_app_views_buses_new_html_erb__305179375_93601488'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (14.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1315.9ms)
+Started GET "/buses/new" for 127.0.0.1 at 2018-05-08 12:10:45 -0700
+Processing by BusesController#new as HTML
+  Rendering buses/new.html.erb within layouts/application
+  Rendered buses/_form.html.erb (195.1ms)
+  Rendered buses/new.html.erb within layouts/application (212.1ms)
+Completed 500 Internal Server Error in 309ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `users_path' for #<#<Class:0xae57348>:0xb7ef0a0>):
+    2:   <div class="col-md-1"></div>
+    3:   <div class="col-md-10">
+    4:     <div class="jumbotron">
+    5:       <%= form_for @user do |f| %>
+    6:         <% if user.errors.any? %>
+    7:           <div class="form-group alert alert-error alert-block" id="error_explanation">
+    8:             <button type="button" class="close" data-dismiss="alert">x</button>
+  
+app/views/buses/_form.html.erb:5:in `_app_views_buses__form_html_erb__432951734_96398448'
+app/views/buses/new.html.erb:5:in `_app_views_buses_new_html_erb__305179375_96435060'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1298.9ms)
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:13:18 -0700
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 332ms (Views: 295.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/buses/new" for 127.0.0.1 at 2018-05-08 12:13:27 -0700
+Processing by BusesController#new as HTML
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `attr_accessible' for #<Class:0xb4a8cd8>):
+  
+app/models/bus.rb:2:in `<class:Bus>'
+app/models/bus.rb:1:in `<top (required)>'
+app/controllers/buses_controller.rb:18:in `new'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1324.9ms)
+Started GET "/buses/new" for 127.0.0.1 at 2018-05-08 12:13:32 -0700
+Processing by BusesController#new as HTML
+Started GET "/buses/new" for 127.0.0.1 at 2018-05-08 12:13:33 -0700
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+Processing by BusesController#new as HTML
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+Completed 500 Internal Server Error in 524ms (ActiveRecord: 2.0ms)
+
+
+  
+NoMethodError (undefined method `attr_accessible' for #<Class:0xb706df8>):
+  
+app/models/bus.rb:2:in `<class:Bus>'
+app/models/bus.rb:1:in `<top (required)>'
+app/controllers/buses_controller.rb:18:in `new'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1365.9ms)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+Completed 500 Internal Server Error in 5258ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `attr_accessible' for #<Class:0xa6a5440>):
+  
+app/models/bus.rb:2:in `<class:Bus>'
+app/models/bus.rb:1:in `<top (required)>'
+app/controllers/buses_controller.rb:18:in `new'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1384.9ms)
+Started GET "/buses/new" for 127.0.0.1 at 2018-05-08 12:13:41 -0700
+Processing by BusesController#new as HTML
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+Completed 500 Internal Server Error in 2118ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `attr_accessible' for #<Class:0xb339658>):
+  
+app/models/bus.rb:2:in `<class:Bus>'
+app/models/bus.rb:1:in `<top (required)>'
+app/controllers/buses_controller.rb:18:in `new'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (18.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1368.9ms)
+Started GET "/buses/new" for 127.0.0.1 at 2018-05-08 12:14:38 -0700
+Processing by BusesController#new as HTML
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+  Rendering buses/new.html.erb within layouts/application
+  Rendered buses/_form.html.erb (4.0ms)
+  Rendered buses/new.html.erb within layouts/application (21.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 460ms (Views: 416.7ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/buses" for 127.0.0.1 at 2018-05-08 12:15:06 -0700
+Processing by BusesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OqxN2mlx0m2Na8KYp/C8SIeZy9tT8Vr5MERdHxMRVTcHHJFvxPz5tLfmpHaXXItOoMqAJcK2bI7AmfiQMyAw2g==", "bus"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Bus"}
+Completed 500 Internal Server Error in 32683ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+app/controllers/buses_controller.rb:29:in `create'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (208.1ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (57.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (19.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1633.1ms)
+Started GET "/buses/new" for 127.0.0.1 at 2018-05-08 12:18:20 -0700
+Processing by BusesController#new as HTML
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+  Rendering buses/new.html.erb within layouts/application
+  Rendered buses/_form.html.erb (451.3ms)
+  Rendered buses/new.html.erb within layouts/application (488.0ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 4288ms (Views: 4071.1ms | ActiveRecord: 18.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (353.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (144.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20180505193552)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180505193552"]]
+  [1m[35m (107.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateBuses (20180506192723)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "buses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "current_lat" float, "current_lan" float, "description" text, "evening_start_time" time, "evening_end_time" time, "morning_start_time" time, "morning_end_time" time, "bus_number" varchar, "status" boolean DEFAULT 't', "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180506192723"]]
+  [1m[35m (126.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-08 19:22:30.108586"], ["updated_at", "2018-05-08 19:22:30.108586"]]
+  [1m[35m (132.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:23:50 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 38ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:24:05 -0700
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-08 12:24:05 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 1032ms (Views: 1015.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-05-08 12:24:12 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 491ms (Views: 489.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-05-08 12:24:19 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"67dS1Syr9Uyyq46+Hb7aO15ol2v77UAlTpYuUIx6s4prRSuSIRT81wKTXK+znEzOdPkmtPuJ6ApnxFi6Q1b1PA==", "user"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"SIGN-UP"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@gmail.com"], ["encrypted_password", "$2a$11$.5gt6fcXfs0FUq7ZZ86MSO0r6X0gqOM035hu9SJWlJ.hh7hnoWCdW"], ["created_at", "2018-05-08 19:24:20.133536"], ["updated_at", "2018-05-08 19:24:20.133536"]]
+  [1m[35m (152.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-05-08 19:24:20.294644"], ["last_sign_in_at", "2018-05-08 19:24:20.294644"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2018-05-08 19:24:20.296646"], ["id", 1]]
+  [1m[35m (105.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 959ms (ActiveRecord: 260.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:24:20 -0700
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 370ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Permission denied @ utime_failed - C:/Sites/BusSystem/tmp/cache/assets/sprockets/v3.0/2u/2umMHp4Bzzv5HQCn-YDn5xrqlElvIVB_BV7DT79JdWM.cache):
+     8:     <%= csrf_meta_tags %>
+     9: 
+    10:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    11:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    12:   </head>
+    13: 
+    14:   <body>
+  
+app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__1006343734_84878748'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1358.9ms)
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:25:04 -0700
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.0ms)
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:25:07 -0700
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 18352ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (Permission denied @ utime_failed - C:/Sites/BusSystem/tmp/cache/assets/sprockets/v3.0/e8/e8J3LmsSEwA1Y4ozlJ-IvmtQAMso70sxnf9_YkvpjJY.cache):
+     7:     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     8:     <%= csrf_meta_tags %>
+     9: 
+    10:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    11:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    12:   </head>
+    13: 
+  
+app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__1006343734_86622720'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (16.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1675.1ms)
+Completed 200 OK in 30180ms (Views: 30118.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:25:37 -0700
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 563ms (Views: 531.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/buses/new" for 127.0.0.1 at 2018-05-08 12:25:53 -0700
+Processing by BusesController#new as HTML
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+  Rendering buses/new.html.erb within layouts/application
+  Rendered buses/_form.html.erb (36.0ms)
+  Rendered buses/new.html.erb within layouts/application (54.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 404ms (Views: 359.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/buses/new" for 127.0.0.1 at 2018-05-08 12:27:12 -0700
+Processing by BusesController#new as HTML
+  Rendering buses/new.html.erb within layouts/application
+  Rendered buses/_form.html.erb (18.0ms)
+  Rendered buses/new.html.erb within layouts/application (34.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 407ms (Views: 380.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/buses/new" for 127.0.0.1 at 2018-05-08 12:27:38 -0700
+Processing by BusesController#new as HTML
+  Rendering buses/new.html.erb within layouts/application
+  Rendered buses/_form.html.erb (17.0ms)
+  Rendered buses/new.html.erb within layouts/application (34.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 353ms (Views: 333.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/buses/new" for 127.0.0.1 at 2018-05-08 12:31:36 -0700
+Processing by BusesController#new as HTML
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+  Rendering buses/new.html.erb within layouts/application
+  Rendered buses/_form.html.erb (198.1ms)
+  Rendered buses/new.html.erb within layouts/application (215.1ms)
+Completed 500 Internal Server Error in 355ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0xb3b1b20>:0xb3b0f20>):
+    3:   <div class="col-md-10">
+    4:     <div class="jumbotron">
+    5:       <%= form_for(bus) do |f| %>
+    6:         <% if user.errors.any? %>
+    7:           <div class="form-group alert alert-error alert-block" id="error_explanation">
+    8:             <button type="button" class="close" data-dismiss="alert">x</button>
+    9:             <% user.errors.full_messages.each do |message| %>
+  
+app/views/buses/_form.html.erb:6:in `block in _app_views_buses__form_html_erb__465113239_93901632'
+app/views/buses/_form.html.erb:5:in `_app_views_buses__form_html_erb__465113239_93901632'
+app/views/buses/new.html.erb:5:in `_app_views_buses_new_html_erb__125206308_94212264'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1326.9ms)
+Started GET "/buses/new" for 127.0.0.1 at 2018-05-08 12:32:03 -0700
+Processing by BusesController#new as HTML
+  Rendering buses/new.html.erb within layouts/application
+  Rendered buses/_form.html.erb (24.0ms)
+  Rendered buses/new.html.erb within layouts/application (46.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 549ms (Views: 526.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/buses" for 127.0.0.1 at 2018-05-08 12:32:36 -0700
+Processing by BusesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pNs9ey5K0IZvydT3fWGefbzDKF5SlCYBkn6ni6LTgViZa+HOg8f7X1VEshlNzal7m5BjoMPTEHZiowIEguLktQ==", "bus"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bus_number"=>"", "current_lat"=>"", "current_lan"=>"", "evening_start_time(1i)"=>"1", "evening_start_time(2i)"=>"1", "evening_start_time(3i)"=>"1", "evening_start_time(4i)"=>"02", "evening_start_time(5i)"=>"04", "evening_end_time(1i)"=>"1", "evening_end_time(2i)"=>"1", "evening_end_time(3i)"=>"1", "evening_end_time(4i)"=>"05", "evening_end_time(5i)"=>"04", "morning_start_time(1i)"=>"1", "morning_start_time(2i)"=>"1", "morning_start_time(3i)"=>"1", "morning_start_time(4i)"=>"05", "morning_start_time(5i)"=>"04", "morning_end_time(1i)"=>"1", "morning_end_time(2i)"=>"1", "morning_end_time(3i)"=>"1", "morning_end_time(4i)"=>"03", "morning_end_time(5i)"=>"02", "description"=>""}, "commit"=>"Create Bus"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering buses/new.html.erb within layouts/application
+  Rendered buses/_form.html.erb (24.0ms)
+  Rendered buses/new.html.erb within layouts/application (48.0ms)
+Completed 500 Internal Server Error in 393ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    2:   <div class="col-md-1"></div>
+    3:   <div class="col-md-10">
+    4:     <div class="jumbotron">
+    5:       <%= form_for(bus) do |f| %>
+    6:         <% if @user.errors.any? %>
+    7:           <div class="form-group alert alert-error alert-block" id="error_explanation">
+    8:             <button type="button" class="close" data-dismiss="alert">x</button>
+  
+app/views/buses/_form.html.erb:5:in `_app_views_buses__form_html_erb__465113239_109359828'
+app/views/buses/new.html.erb:5:in `_app_views_buses_new_html_erb__125206308_111910260'
+app/controllers/buses_controller.rb:35:in `block (2 levels) in create'
+app/controllers/buses_controller.rb:34:in `create'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (15.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1808.2ms)
+Started POST "/buses" for 127.0.0.1 at 2018-05-08 12:34:29 -0700
+Processing by BusesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pNs9ey5K0IZvydT3fWGefbzDKF5SlCYBkn6ni6LTgViZa+HOg8f7X1VEshlNzal7m5BjoMPTEHZiowIEguLktQ==", "bus"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bus_number"=>"", "current_lat"=>"", "current_lan"=>"", "evening_start_time(1i)"=>"1", "evening_start_time(2i)"=>"1", "evening_start_time(3i)"=>"1", "evening_start_time(4i)"=>"02", "evening_start_time(5i)"=>"04", "evening_end_time(1i)"=>"1", "evening_end_time(2i)"=>"1", "evening_end_time(3i)"=>"1", "evening_end_time(4i)"=>"05", "evening_end_time(5i)"=>"04", "morning_start_time(1i)"=>"1", "morning_start_time(2i)"=>"1", "morning_start_time(3i)"=>"1", "morning_start_time(4i)"=>"05", "morning_start_time(5i)"=>"04", "morning_end_time(1i)"=>"1", "morning_end_time(2i)"=>"1", "morning_end_time(3i)"=>"1", "morning_end_time(4i)"=>"03", "morning_end_time(5i)"=>"02", "description"=>""}, "commit"=>"Create Bus"}
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from create at C:/Sites/BusSystem/app/controllers/buses_controller.rb:28)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from create at C:/Sites/BusSystem/app/controllers/buses_controller.rb:28)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from create at C:/Sites/BusSystem/app/controllers/buses_controller.rb:28)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from create at C:/Sites/BusSystem/app/controllers/buses_controller.rb:28)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering buses/new.html.erb within layouts/application
+  Rendered buses/_form.html.erb (18.0ms)
+  Rendered buses/new.html.erb within layouts/application (36.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 636ms (Views: 369.9ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/buses" for 127.0.0.1 at 2018-05-08 12:36:43 -0700
+Processing by BusesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fFvkG0HsOTGD6CLnSR16C3ri9d/j8UbARwUVPdyGAQVB6ziu7GES6LllRAl5sU0NXbG+IXK2cLe32LCy/Ldk6A==", "bus"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bus_number"=>"", "current_lat"=>"", "current_lan"=>"", "evening_start_time(1i)"=>"1", "evening_start_time(2i)"=>"1", "evening_start_time(3i)"=>"1", "evening_start_time(4i)"=>"02", "evening_start_time(5i)"=>"04", "evening_end_time(1i)"=>"1", "evening_end_time(2i)"=>"1", "evening_end_time(3i)"=>"1", "evening_end_time(4i)"=>"05", "evening_end_time(5i)"=>"04", "morning_start_time(1i)"=>"1", "morning_start_time(2i)"=>"1", "morning_start_time(3i)"=>"1", "morning_start_time(4i)"=>"05", "morning_start_time(5i)"=>"04", "morning_end_time(1i)"=>"1", "morning_end_time(2i)"=>"1", "morning_end_time(3i)"=>"1", "morning_end_time(4i)"=>"03", "morning_end_time(5i)"=>"02", "description"=>""}, "commit"=>"Create Bus"}
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from create at C:/Sites/BusSystem/app/controllers/buses_controller.rb:28)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from create at C:/Sites/BusSystem/app/controllers/buses_controller.rb:28)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from create at C:/Sites/BusSystem/app/controllers/buses_controller.rb:28)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from create at C:/Sites/BusSystem/app/controllers/buses_controller.rb:28)
+Completed 500 Internal Server Error in 62437ms (ActiveRecord: 3.0ms)
+
+
+  
+SystemExit (exit):
+  
+app/controllers/buses_controller.rb:34:in `create'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (316.2ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (74.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (98.1ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2162.4ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from irb_binding at (irb):2)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from irb_binding at (irb):2)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from irb_binding at (irb):2)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from irb_binding at (irb):2)
+  [1m[36mBus Load (0.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Started GET "/buses/new" for 127.0.0.1 at 2018-05-08 12:41:53 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BusesController#new as HTML
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+  Rendering buses/new.html.erb within layouts/application
+  Rendered buses/_form.html.erb (134.1ms)
+  Rendered buses/new.html.erb within layouts/application (157.1ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 4663ms (Views: 4574.5ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/buses" for 127.0.0.1 at 2018-05-08 12:43:49 -0700
+Processing by BusesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NPEtTrLdk8P1EPfBAQumBI5p4lRN8zpVJZABOi+dr2YJQfH7H1C4Gs+dkS8xp5ECqTqpqty0DCLVTaS1D6zKiw==", "bus"=>{"email"=>"bus1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bus_number"=>"LEW-14-1234", "current_lat"=>"34.555555555", "current_lan"=>"67", "evening_start_time(1i)"=>"1", "evening_start_time(2i)"=>"1", "evening_start_time(3i)"=>"1", "evening_start_time(4i)"=>"08", "evening_start_time(5i)"=>"57", "evening_end_time(1i)"=>"1", "evening_end_time(2i)"=>"1", "evening_end_time(3i)"=>"1", "evening_end_time(4i)"=>"12", "evening_end_time(5i)"=>"45", "morning_start_time(1i)"=>"1", "morning_start_time(2i)"=>"1", "morning_start_time(3i)"=>"1", "morning_start_time(4i)"=>"23", "morning_start_time(5i)"=>"41", "morning_end_time(1i)"=>"1", "morning_end_time(2i)"=>"1", "morning_end_time(3i)"=>"1", "morning_end_time(4i)"=>"03", "morning_end_time(5i)"=>"04", "description"=>"This is the 1st Bus"}, "commit"=>"Create Bus"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bus1@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "bus1@gmail.com"], ["encrypted_password", "$2a$11$eV5e5XoXlb/PykISTKSvBOWq1OOLhZWTpvv7ATylZFYQ67.7esFCq"], ["created_at", "2018-05-08 19:43:49.512359"], ["updated_at", "2018-05-08 19:43:49.512359"]]
+  [1m[35m (141.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (37.0ms)[0m  [1m[32mINSERT INTO "buses" ("current_lat", "current_lan", "description", "evening_start_time", "evening_end_time", "morning_start_time", "morning_end_time", "bus_number", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["current_lat", 34.555555555], ["current_lan", 67.0], ["description", "This is the 1st Bus"], ["evening_start_time", "2000-01-01 08:57:00"], ["evening_end_time", "2000-01-01 12:45:00"], ["morning_start_time", "2000-01-01 23:41:00"], ["morning_end_time", "2000-01-01 03:04:00"], ["bus_number", "LEW-14-1234"], ["user_id", 2], ["created_at", "2018-05-08 19:43:49.852587"], ["updated_at", "2018-05-08 19:43:49.852587"]]
+  [1m[35m (174.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/buses
+Completed 302 Found in 1034ms (ActiveRecord: 355.2ms)
+
+
+Started GET "/buses" for 127.0.0.1 at 2018-05-08 12:43:50 -0700
+Processing by BusesController#index as HTML
+  Rendering buses/index.html.erb within layouts/application
+  [1m[36mBus Load (1.0ms)[0m  [1m[34mSELECT "buses".* FROM "buses"[0m
+  Rendered buses/index.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 558ms (Views: 532.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/buses/1" for 127.0.0.1 at 2018-05-08 12:44:37 -0700
+Processing by BusesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBus Load (0.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buses/show.html.erb within layouts/application
+  Rendered buses/show.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 373ms (Views: 348.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/buses/1" for 127.0.0.1 at 2018-05-08 12:44:52 -0700
+Processing by BusesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBus Load (1.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buses/show.html.erb within layouts/application
+  Rendered buses/show.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 396ms (Views: 376.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/buses" for 127.0.0.1 at 2018-05-08 12:45:02 -0700
+Processing by BusesController#index as HTML
+  Rendering buses/index.html.erb within layouts/application
+  [1m[36mBus Load (0.0ms)[0m  [1m[34mSELECT "buses".* FROM "buses"[0m
+  Rendered buses/index.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 478ms (Views: 451.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/buses" for 127.0.0.1 at 2018-05-08 12:45:47 -0700
+Processing by BusesController#index as HTML
+  Rendering buses/index.html.erb within layouts/application
+  [1m[36mBus Load (0.0ms)[0m  [1m[34mSELECT "buses".* FROM "buses"[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_buses_index_html_erb___23499938_78533352 at C:/Sites/BusSystem/app/views/buses/index.html.erb:22)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_buses_index_html_erb___23499938_78533352 at C:/Sites/BusSystem/app/views/buses/index.html.erb:22)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_buses_index_html_erb___23499938_78533352 at C:/Sites/BusSystem/app/views/buses/index.html.erb:22)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_buses_index_html_erb___23499938_78533352 at C:/Sites/BusSystem/app/views/buses/index.html.erb:22)
+  Rendered buses/index.html.erb within layouts/application (31.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 501ms (Views: 470.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/buses/1" for 127.0.0.1 at 2018-05-08 12:47:26 -0700
+Processing by BusesController#show as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from set_bus at C:/Sites/BusSystem/app/controllers/buses_controller.rb:80)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from set_bus at C:/Sites/BusSystem/app/controllers/buses_controller.rb:80)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from set_bus at C:/Sites/BusSystem/app/controllers/buses_controller.rb:80)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from set_bus at C:/Sites/BusSystem/app/controllers/buses_controller.rb:80)
+  [1m[36mBus Load (0.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buses/show.html.erb within layouts/application
+  Rendered buses/show.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 770ms (Views: 715.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/buses/1" for 127.0.0.1 at 2018-05-08 12:47:27 -0700
+Processing by BusesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBus Load (1.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buses/show.html.erb within layouts/application
+  Rendered buses/show.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 647ms (Views: 610.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:47:34 -0700
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 423ms (Views: 393.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (176.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (152.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20180505193552)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "role" integer DEFAULT 0, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180505193552"]]
+  [1m[35m (90.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateBuses (20180506192723)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "buses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "current_lat" float, "current_lan" float, "description" text, "evening_start_time" time, "evening_end_time" time, "morning_start_time" time, "morning_end_time" time, "bus_number" varchar, "status" boolean DEFAULT 't', "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180506192723"]]
+  [1m[35m (178.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-08 19:53:27.001954"], ["updated_at", "2018-05-08 19:53:27.001954"]]
+  [1m[35m (173.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:54:09 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 38ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-05-08 12:54:23 -0700
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (63.0ms)
+Completed 200 OK in 1465ms (Views: 1448.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-05-08 12:54:28 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 394ms (Views: 393.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-05-08 12:54:37 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q0lBinh+tbrcBDUr42Dsn8cu8oF6ndTnxS9E5+/T70cruzjNdcG8IWw85zpNQnpq7b9DXnr5fMjsfTINIP+p8Q==", "user"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"SIGN-UP"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@gmail.com"], ["encrypted_password", "$2a$11$nq8I5XHzeabDDIU8wm7oKO1hKg5KWqlTKL7PI9pysCYIsImVuOS1G"], ["created_at", "2018-05-08 19:54:38.171831"], ["updated_at", "2018-05-08 19:54:38.171831"]]
+  [1m[35m (167.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-05-08 19:54:38.346949"], ["last_sign_in_at", "2018-05-08 19:54:38.346949"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2018-05-08 19:54:38.349951"], ["id", 1]]
+  [1m[35m (112.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 817ms (ActiveRecord: 281.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 12:54:38 -0700
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 399ms (Views: 369.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/buses/new" for 127.0.0.1 at 2018-05-08 12:54:47 -0700
+Processing by BusesController#new as HTML
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+  Rendering buses/new.html.erb within layouts/application
+  Rendered buses/_form.html.erb (34.0ms)
+  Rendered buses/new.html.erb within layouts/application (49.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 390ms (Views: 346.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/buses" for 127.0.0.1 at 2018-05-08 12:55:20 -0700
+Processing by BusesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1v+tSVYz1BsiPeJRb2NqZkXOYRfopvQFZzWtwwAxivLrT3H8+77/whiwhL9fz11gYp0q6XnhwnKX6AhMIADvHw==", "bus"=>{"email"=>"bus1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bus_number"=>"LEW-14-1234", "current_lat"=>"34.5555555", "current_lan"=>"34.5555555", "evening_start_time(1i)"=>"1", "evening_start_time(2i)"=>"1", "evening_start_time(3i)"=>"1", "evening_start_time(4i)"=>"04", "evening_start_time(5i)"=>"04", "evening_end_time(1i)"=>"1", "evening_end_time(2i)"=>"1", "evening_end_time(3i)"=>"1", "evening_end_time(4i)"=>"05", "evening_end_time(5i)"=>"04", "morning_start_time(1i)"=>"1", "morning_start_time(2i)"=>"1", "morning_start_time(3i)"=>"1", "morning_start_time(4i)"=>"04", "morning_start_time(5i)"=>"04", "morning_end_time(1i)"=>"1", "morning_end_time(2i)"=>"1", "morning_end_time(3i)"=>"1", "morning_end_time(4i)"=>"04", "morning_end_time(5i)"=>"04", "description"=>"34.5555555"}, "commit"=>"Create Bus"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bus1@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("role", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["role", 1], ["email", "bus1@gmail.com"], ["encrypted_password", "$2a$11$27YgvHEMSqVhslGQBLT8seH/GrAzwtU2m0WVzG4O8nKOSY9HPXVJO"], ["created_at", "2018-05-08 19:55:20.953956"], ["updated_at", "2018-05-08 19:55:20.953956"]]
+  [1m[35m (156.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "buses" ("current_lat", "current_lan", "description", "evening_start_time", "evening_end_time", "morning_start_time", "morning_end_time", "bus_number", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["current_lat", 34.5555555], ["current_lan", 34.5555555], ["description", "34.5555555"], ["evening_start_time", "2000-01-01 04:04:00"], ["evening_end_time", "2000-01-01 05:04:00"], ["morning_start_time", "2000-01-01 04:04:00"], ["morning_end_time", "2000-01-01 04:04:00"], ["bus_number", "LEW-14-1234"], ["user_id", 2], ["created_at", "2018-05-08 19:55:21.189113"], ["updated_at", "2018-05-08 19:55:21.189113"]]
+  [1m[35m (85.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/buses
+Completed 302 Found in 550ms (ActiveRecord: 245.2ms)
+
+
+Started GET "/buses" for 127.0.0.1 at 2018-05-08 12:55:21 -0700
+Processing by BusesController#index as HTML
+  Rendering buses/index.html.erb within layouts/application
+  [1m[36mBus Load (0.0ms)[0m  [1m[34mSELECT "buses".* FROM "buses"[0m
+  Rendered buses/index.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 403ms (Views: 380.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/buses/new" for 127.0.0.1 at 2018-05-08 12:56:38 -0700
+Processing by BusesController#new as HTML
+  Rendering buses/new.html.erb within layouts/application
+  Rendered buses/_form.html.erb (14.0ms)
+  Rendered buses/new.html.erb within layouts/application (31.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 357ms (Views: 333.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/buses/new" for 127.0.0.1 at 2018-05-08 12:57:18 -0700
+Processing by BusesController#new as HTML
+  Rendering buses/new.html.erb within layouts/application
+  Rendered buses/_form.html.erb (15.0ms)
+  Rendered buses/new.html.erb within layouts/application (32.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 344ms (Views: 323.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/buses/new" for 127.0.0.1 at 2018-05-08 13:01:38 -0700
+Processing by BusesController#new as HTML
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from new at C:/Sites/BusSystem/app/controllers/buses_controller.rb:18)
+  Rendering buses/new.html.erb within layouts/application
+  Rendered buses/_form.html.erb (17.0ms)
+  Rendered buses/new.html.erb within layouts/application (34.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 400ms (Views: 338.2ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/buses" for 127.0.0.1 at 2018-05-08 13:02:27 -0700
+Processing by BusesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LfMkvDqu4exT1HTl4Kc4PGQxz+XqpHo6EvGe7svKYj0QQ/gJlyPKNWlZEgvQCw86Q2KEG3vjTE3iLDth6/sH0A==", "bus"=>{"email"=>"bus1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bus_number"=>"", "current_lat"=>"", "current_lan"=>"", "evening_start_time(1i)"=>"1", "evening_start_time(2i)"=>"1", "evening_start_time(3i)"=>"1", "evening_start_time(4i)"=>"05", "evening_start_time(5i)"=>"04", "evening_end_time(1i)"=>"1", "evening_end_time(2i)"=>"1", "evening_end_time(3i)"=>"1", "evening_end_time(4i)"=>"03", "evening_end_time(5i)"=>"03", "morning_start_time(1i)"=>"1", "morning_start_time(2i)"=>"1", "morning_start_time(3i)"=>"1", "morning_start_time(4i)"=>"03", "morning_start_time(5i)"=>"03", "morning_end_time(1i)"=>"1", "morning_end_time(2i)"=>"1", "morning_end_time(3i)"=>"1", "morning_end_time(4i)"=>"03", "morning_end_time(5i)"=>"03", "description"=>""}, "commit"=>"Create Bus"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bus1@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering buses/new.html.erb within layouts/application
+  Rendered buses/_form.html.erb (17.0ms)
+  Rendered buses/new.html.erb within layouts/application (35.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 591ms (Views: 342.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/buses" for 127.0.0.1 at 2018-05-08 13:02:45 -0700
+Processing by BusesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YRyv1mG4woFsyw2iOd0p5neWoT9gwiXgwjWjIhwAAJNcrHNjzDXpWFZGa0wJcR7gUMXqwfGFE5cy6AatPDFlfg==", "bus"=>{"email"=>"bus2@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bus_number"=>"", "current_lat"=>"", "current_lan"=>"", "evening_start_time(1i)"=>"1", "evening_start_time(2i)"=>"1", "evening_start_time(3i)"=>"1", "evening_start_time(4i)"=>"05", "evening_start_time(5i)"=>"04", "evening_end_time(1i)"=>"1", "evening_end_time(2i)"=>"1", "evening_end_time(3i)"=>"1", "evening_end_time(4i)"=>"03", "evening_end_time(5i)"=>"03", "morning_start_time(1i)"=>"1", "morning_start_time(2i)"=>"1", "morning_start_time(3i)"=>"1", "morning_start_time(4i)"=>"03", "morning_start_time(5i)"=>"03", "morning_end_time(1i)"=>"1", "morning_end_time(2i)"=>"1", "morning_end_time(3i)"=>"1", "morning_end_time(4i)"=>"03", "morning_end_time(5i)"=>"03", "description"=>""}, "commit"=>"Create Bus"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bus2@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("role", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["role", 1], ["email", "bus2@gmail.com"], ["encrypted_password", "$2a$11$rAGes6kw.LE6ZyBSYdHyw.vSnhpgvuHoVs4lz6WQg29j3WSa0WwhC"], ["created_at", "2018-05-08 20:02:45.460403"], ["updated_at", "2018-05-08 20:02:45.460403"]]
+  [1m[35m (81.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering buses/new.html.erb within layouts/application
+  Rendered buses/_form.html.erb (28.0ms)
+  Rendered buses/new.html.erb within layouts/application (50.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 712ms (Views: 389.2ms | ActiveRecord: 84.1ms)
+
+
+Started POST "/buses" for 127.0.0.1 at 2018-05-08 13:04:09 -0700
+Processing by BusesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+kDcw3PvBWn4BX94Maqfla3f4bIaJFVz/wsSffN6oNDH8AB23mIusMKIGZYBBqiTioyqTItjYwQP1rfy00vFPQ==", "bus"=>{"email"=>"bus2@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bus_number"=>"LEW-14-1234", "current_lat"=>"35.0979017904", "current_lan"=>"74.0907070870", "evening_start_time(1i)"=>"1", "evening_start_time(2i)"=>"1", "evening_start_time(3i)"=>"1", "evening_start_time(4i)"=>"05", "evening_start_time(5i)"=>"04", "evening_end_time(1i)"=>"1", "evening_end_time(2i)"=>"1", "evening_end_time(3i)"=>"1", "evening_end_time(4i)"=>"03", "evening_end_time(5i)"=>"03", "morning_start_time(1i)"=>"1", "morning_start_time(2i)"=>"1", "morning_start_time(3i)"=>"1", "morning_start_time(4i)"=>"03", "morning_start_time(5i)"=>"03", "morning_end_time(1i)"=>"1", "morning_end_time(2i)"=>"1", "morning_end_time(3i)"=>"1", "morning_end_time(4i)"=>"03", "morning_end_time(5i)"=>"03", "description"=>"That's the second bus\r\n"}, "commit"=>"Create Bus"}
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bus2@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering buses/new.html.erb within layouts/application
+  Rendered buses/_form.html.erb (15.0ms)
+  Rendered buses/new.html.erb within layouts/application (32.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 516ms (Views: 291.4ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/buses" for 127.0.0.1 at 2018-05-08 13:04:33 -0700
+Processing by BusesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hGkaNSa8cIgk5YTBOC7l7J4aqQcL2/qQxpQlaxEGggO52caAizFbUR5o4i8IgtLquUni+ZqczOc2SYDkMTfn7g==", "bus"=>{"email"=>"bus3@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bus_number"=>"LEW-14-1234", "current_lat"=>"35.0979017904", "current_lan"=>"74.0907070870", "evening_start_time(1i)"=>"1", "evening_start_time(2i)"=>"1", "evening_start_time(3i)"=>"1", "evening_start_time(4i)"=>"05", "evening_start_time(5i)"=>"04", "evening_end_time(1i)"=>"1", "evening_end_time(2i)"=>"1", "evening_end_time(3i)"=>"1", "evening_end_time(4i)"=>"03", "evening_end_time(5i)"=>"03", "morning_start_time(1i)"=>"1", "morning_start_time(2i)"=>"1", "morning_start_time(3i)"=>"1", "morning_start_time(4i)"=>"03", "morning_start_time(5i)"=>"03", "morning_end_time(1i)"=>"1", "morning_end_time(2i)"=>"1", "morning_end_time(3i)"=>"1", "morning_end_time(4i)"=>"03", "morning_end_time(5i)"=>"03", "description"=>"That's the second bus\r\n"}, "commit"=>"Create Bus"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bus3@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("role", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["role", 1], ["email", "bus3@gmail.com"], ["encrypted_password", "$2a$11$unpXMXt1/3pcGssKR01c3.PCww2GCsqZrsMXxUc05xAOKqRLbS7LC"], ["created_at", "2018-05-08 20:04:34.003074"], ["updated_at", "2018-05-08 20:04:34.003074"]]
+  [1m[35m (98.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "buses" ("current_lat", "current_lan", "description", "evening_start_time", "evening_end_time", "morning_start_time", "morning_end_time", "bus_number", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["current_lat", 35.0979017904], ["current_lan", 74.090707087], ["description", "That's the second bus\r\n"], ["evening_start_time", "2000-01-01 05:04:00"], ["evening_end_time", "2000-01-01 03:03:00"], ["morning_start_time", "2000-01-01 03:03:00"], ["morning_end_time", "2000-01-01 03:03:00"], ["bus_number", "LEW-14-1234"], ["user_id", 4], ["created_at", "2018-05-08 20:04:34.109145"], ["updated_at", "2018-05-08 20:04:34.109145"]]
+  [1m[35m (175.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/buses
+Completed 302 Found in 505ms (ActiveRecord: 276.2ms)
+
+
+Started GET "/buses" for 127.0.0.1 at 2018-05-08 13:04:34 -0700
+Processing by BusesController#index as HTML
+  Rendering buses/index.html.erb within layouts/application
+  [1m[36mBus Load (0.0ms)[0m  [1m[34mSELECT "buses".* FROM "buses"[0m
+  Rendered buses/index.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 388ms (Views: 365.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/buses" for 127.0.0.1 at 2018-05-08 13:06:34 -0700
+Processing by BusesController#index as HTML
+  Rendering buses/index.html.erb within layouts/application
+  [1m[36mBus Load (1.0ms)[0m  [1m[34mSELECT "buses".* FROM "buses"[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_buses_index_html_erb__71931506_76228920 at C:/Sites/BusSystem/app/views/buses/index.html.erb:22)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_buses_index_html_erb__71931506_76228920 at C:/Sites/BusSystem/app/views/buses/index.html.erb:22)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_buses_index_html_erb__71931506_76228920 at C:/Sites/BusSystem/app/views/buses/index.html.erb:22)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_buses_index_html_erb__71931506_76228920 at C:/Sites/BusSystem/app/views/buses/index.html.erb:22)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered buses/index.html.erb within layouts/application (53.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 378ms (Views: 351.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/buses" for 127.0.0.1 at 2018-05-08 13:06:56 -0700
+Processing by BusesController#index as HTML
+  Rendering buses/index.html.erb within layouts/application
+  [1m[36mBus Load (0.0ms)[0m  [1m[34mSELECT "buses".* FROM "buses"[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered buses/index.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 350ms (Views: 330.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/buses/1" for 127.0.0.1 at 2018-05-08 13:08:53 -0700
+Processing by BusesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBus Load (0.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buses/show.html.erb within layouts/application
+  Rendered buses/show.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 334ms (Views: 305.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/buses" for 127.0.0.1 at 2018-05-08 13:09:09 -0700
+Processing by BusesController#index as HTML
+  Rendering buses/index.html.erb within layouts/application
+  [1m[36mBus Load (0.0ms)[0m  [1m[34mSELECT "buses".* FROM "buses"[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered buses/index.html.erb within layouts/application (8.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 311ms (Views: 289.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/buses/1/edit" for 127.0.0.1 at 2018-05-08 13:09:12 -0700
+Processing by BusesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBus Load (0.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buses/edit.html.erb within layouts/application
+  Rendered buses/_form.html.erb (20.0ms)
+  Rendered buses/edit.html.erb within layouts/application (38.0ms)
+Completed 500 Internal Server Error in 134ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    3:   <div class="col-md-10">
+    4:     <div class="jumbotron">
+    5:       <%= form_for(bus) do |f| %>
+    6:         <% if @user.errors.any? %>
+    7:           <div class="form-group alert alert-error alert-block" id="error_explanation">
+    8:             <button type="button" class="close" data-dismiss="alert">x</button>
+    9:             <% @user.errors.full_messages.each do |message| %>
+  
+app/views/buses/_form.html.erb:6:in `block in _app_views_buses__form_html_erb___627951564_90513084'
+app/views/buses/_form.html.erb:5:in `_app_views_buses__form_html_erb___627951564_90513084'
+app/views/buses/edit.html.erb:5:in `_app_views_buses_edit_html_erb___294997363_90558504'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1251.8ms)
+Started GET "/buses" for 127.0.0.1 at 2018-05-08 13:11:03 -0700
+Processing by BusesController#index as HTML
+  Rendering buses/index.html.erb within layouts/application
+  [1m[36mBus Load (1.0ms)[0m  [1m[34mSELECT "buses".* FROM "buses"[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_buses_index_html_erb__71931506_71989512 at C:/Sites/BusSystem/app/views/buses/index.html.erb:22)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_buses_index_html_erb__71931506_71989512 at C:/Sites/BusSystem/app/views/buses/index.html.erb:22)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_buses_index_html_erb__71931506_71989512 at C:/Sites/BusSystem/app/views/buses/index.html.erb:22)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from _app_views_buses_index_html_erb__71931506_71989512 at C:/Sites/BusSystem/app/views/buses/index.html.erb:22)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered buses/index.html.erb within layouts/application (52.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 380ms (Views: 354.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/buses/1/edit" for 127.0.0.1 at 2018-05-08 13:11:06 -0700
+Processing by BusesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBus Load (1.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering buses/edit.html.erb within layouts/application
+  Rendered buses/_form.html.erb (307.2ms)
+  Rendered buses/edit.html.erb within layouts/application (342.2ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 24971ms (Views: 2017.2ms | ActiveRecord: 4.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `call'
+byebug (10.0.2) lib/byebug/helpers/eval.rb:61:in `eval'
+byebug (10.0.2) lib/byebug/helpers/eval.rb:61:in `safe_eval'
+byebug (10.0.2) lib/byebug/helpers/eval.rb:55:in `warning_eval'
+byebug (10.0.2) lib/byebug/helpers/eval.rb:31:in `block in multiple_thread_eval'
+byebug (10.0.2) lib/byebug/helpers/eval.rb:94:in `allowing_other_threads'
+byebug (10.0.2) lib/byebug/helpers/eval.rb:31:in `multiple_thread_eval'
+byebug (10.0.2) lib/byebug/processors/command_processor.rb:163:in `block in run_cmd'
+byebug (10.0.2) lib/byebug/processors/command_processor.rb:168:in `safely'
+byebug (10.0.2) lib/byebug/processors/command_processor.rb:159:in `run_cmd'
+byebug (10.0.2) lib/byebug/processors/command_processor.rb:133:in `repl'
+byebug (10.0.2) lib/byebug/processors/command_processor.rb:97:in `process_commands'
+byebug (10.0.2) lib/byebug/processors/command_processor.rb:55:in `at_line'
+byebug (10.0.2) lib/byebug/context.rb:98:in `at_line'
+activesupport (5.0.7) lib/active_support/callbacks.rb:127:in `call'
+activesupport (5.0.7) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.7) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.7) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.7) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.7) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.7) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.7) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.7) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.7) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.7) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.7) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.7) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.7) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.7) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.7) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.7) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.7) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7) lib/action_dispatch/routing/route_set.rb:727:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `call'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (179.1ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (57.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1545.0ms)
+Started GET "/buses" for 127.0.0.1 at 2018-05-08 13:11:47 -0700
+Processing by BusesController#index as HTML
+  Rendering buses/index.html.erb within layouts/application
+  [1m[36mBus Load (1.0ms)[0m  [1m[34mSELECT "buses".* FROM "buses"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered buses/index.html.erb within layouts/application (79.1ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2528ms (Views: 2494.8ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/buses/1/edit" for 127.0.0.1 at 2018-05-08 13:12:04 -0700
+Processing by BusesController#edit as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from set_bus at C:/Sites/BusSystem/app/controllers/buses_controller.rb:82)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from set_bus at C:/Sites/BusSystem/app/controllers/buses_controller.rb:82)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from set_bus at C:/Sites/BusSystem/app/controllers/buses_controller.rb:82)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from set_bus at C:/Sites/BusSystem/app/controllers/buses_controller.rb:82)
+  [1m[36mBus Load (1.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (1.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering buses/edit.html.erb within layouts/application
+  Rendered buses/_form.html.erb (381.3ms)
+  Rendered buses/edit.html.erb within layouts/application (417.3ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3383ms (Views: 3026.2ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/buses/1" for 127.0.0.1 at 2018-05-08 13:13:13 -0700
+Processing by BusesController#show as HTML
+  Parameters: {"id"=>"1"}
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from set_bus at C:/Sites/BusSystem/app/controllers/buses_controller.rb:82)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from set_bus at C:/Sites/BusSystem/app/controllers/buses_controller.rb:82)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from set_bus at C:/Sites/BusSystem/app/controllers/buses_controller.rb:82)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from set_bus at C:/Sites/BusSystem/app/controllers/buses_controller.rb:82)
+  [1m[36mBus Load (2.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buses/show.html.erb within layouts/application
+  Rendered buses/show.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 4046ms (Views: 3748.0ms | ActiveRecord: 46.0ms)
+
+
+Started GET "/buses/1" for 127.0.0.1 at 2018-05-08 13:20:07 -0700
+Processing by BusesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBus Load (2.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buses/show.html.erb within layouts/application
+  Rendered buses/show.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3446ms (Views: 3374.5ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/buses/1" for 127.0.0.1 at 2018-05-08 13:25:32 -0700
+Processing by BusesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBus Load (1.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buses/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered buses/show.html.erb within layouts/application (89.1ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3459ms (Views: 3405.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/buses/1" for 127.0.0.1 at 2018-05-08 13:31:47 -0700
+Processing by BusesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBus Load (1.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buses/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered buses/show.html.erb within layouts/application (60.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3506ms (Views: 3449.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/buses/1" for 127.0.0.1 at 2018-05-08 13:35:59 -0700
+Processing by BusesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBus Load (1.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buses/show.html.erb within layouts/application
+  Rendered buses/show.html.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 161ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (C:/Sites/BusSystem/app/views/buses/show.html.erb:44: unknown regexp options - labl
+unmatched close parenthesis: /label>
+          <%else);@output_buffer.safe_append=' </
+C:/Sites/BusSystem/app/views/buses/show.html.erb:45: syntax error, unexpected '<'
+            <label class="my_value"> '.fre...
+             ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:47: unknown regexp options - dv
+C:/Sites/BusSystem/app/views/buses/show.html.erb:49: syntax error, unexpected '<'
+        <div class="col-md-6">
+         ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:50: syntax error, unexpected '<'
+          <label class="my_label">Morning Start Time:</label>
+           ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:50: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+          <label class="my_label">Morning Start Time:</label>
+                                               ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:51: unknown regexp options - dv
+C:/Sites/BusSystem/app/views/buses/show.html.erb:52: syntax error, unexpected '<'
+        <div class="col-md-6">
+         ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:53: syntax error, unexpected '<'
+          <label class="my_value"> '.fre...
+           ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:54: unknown regexp options - dv
+C:/Sites/BusSystem/app/views/buses/show.html.erb:55: syntax error, unexpected '<'
+        <div class="col-md-6">
+         ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:56: syntax error, unexpected '<'
+          <label class="my_label">Morning End Time:</label>
+           ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:56: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+          <label class="my_label">Morning End Time:</label>
+                                             ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:57: unknown regexp options - dv
+C:/Sites/BusSystem/app/views/buses/show.html.erb:58: syntax error, unexpected '<'
+        <div class="col-md-6">
+         ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:59: syntax error, unexpected '<'
+          <label class="my_value"> '.fre...
+           ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:60: unknown regexp options - dv
+C:/Sites/BusSystem/app/views/buses/show.html.erb:62: syntax error, unexpected '<'
+        <div class="col-md-6">
+         ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:63: syntax error, unexpected '<'
+          <label class="my_label">Evening Start Time:</label>
+           ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:63: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+          <label class="my_label">Evening Start Time:</label>
+                                               ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:64: unknown regexp options - dv
+C:/Sites/BusSystem/app/views/buses/show.html.erb:65: syntax error, unexpected '<'
+        <div class="col-md-6">
+         ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:66: syntax error, unexpected '<'
+          <label class="my_value"> '.fre...
+           ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:67: unknown regexp options - dv
+C:/Sites/BusSystem/app/views/buses/show.html.erb:68: syntax error, unexpected '<'
+        <div class="col-md-6">
+         ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:69: syntax error, unexpected '<'
+          <label class="my_label">Evening End Time:</label>
+           ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:69: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+          <label class="my_label">Evening End Time:</label>
+                                             ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:70: unknown regexp options - dv
+C:/Sites/BusSystem/app/views/buses/show.html.erb:71: syntax error, unexpected '<'
+        <div class="col-md-6">
+         ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:72: syntax error, unexpected '<'
+          <label class="my_value"> '.fre...
+           ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:73: unknown regexp options - dv
+C:/Sites/BusSystem/app/views/buses/show.html.erb:74: syntax error, unexpected '<'
+        <div class="col-md-6">
+         ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:75: syntax error, unexpected '<'
+          <label class="my_label">Description:</label>
+           ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:75: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+          <label class="my_label">Description:</label>
+                                              ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:76: syntax error, unexpected '<'
+        </div>
+         ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:78: unknown regexp options - labl
+C:/Sites/BusSystem/app/views/buses/show.html.erb:79: syntax error, unexpected '<'
+        </div>
+         ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:83: unknown regexp options - dv
+C:/Sites/BusSystem/app/views/buses/show.html.erb:84: syntax error, unexpected '<'
+            <div class="col-md-3">
+             ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:85: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.append=( link_to 'Edit', edit_bus_path(@bus), class...
+...                               ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:86: syntax error, unexpected '<', expecting ')'
+            </div>
+             ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:89: unknown regexp options - dv
+C:/Sites/BusSystem/app/views/buses/show.html.erb:90: syntax error, unexpected '<'
+            <div class="col-md-3">
+             ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:91: syntax error, unexpected '<'
+            </div>
+             ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:92: unknown regexp options - dv
+C:/Sites/BusSystem/app/views/buses/show.html.erb:93: syntax error, unexpected '<'
+        </div>
+         ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:94: unknown regexp options - dv
+C:/Sites/BusSystem/app/views/buses/show.html.erb:95: syntax error, unexpected '<'
+    </div>
+     ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:96: unknown regexp options - dv
+C:/Sites/BusSystem/app/views/buses/show.html.erb:97: syntax error, unexpected '<'
+</div>
+ ^
+C:/Sites/BusSystem/app/views/buses/show.html.erb:97: unterminated regexp meets end of file):
+  
+app/views/buses/show.html.erb:44: unknown regexp options - labl
+app/views/buses/show.html.erb:45: syntax error, unexpected '<'
+app/views/buses/show.html.erb:47: unknown regexp options - dv
+app/views/buses/show.html.erb:49: syntax error, unexpected '<'
+app/views/buses/show.html.erb:50: syntax error, unexpected '<'
+app/views/buses/show.html.erb:50: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/buses/show.html.erb:51: unknown regexp options - dv
+app/views/buses/show.html.erb:52: syntax error, unexpected '<'
+app/views/buses/show.html.erb:53: syntax error, unexpected '<'
+app/views/buses/show.html.erb:54: unknown regexp options - dv
+app/views/buses/show.html.erb:55: syntax error, unexpected '<'
+app/views/buses/show.html.erb:56: syntax error, unexpected '<'
+app/views/buses/show.html.erb:56: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/buses/show.html.erb:57: unknown regexp options - dv
+app/views/buses/show.html.erb:58: syntax error, unexpected '<'
+app/views/buses/show.html.erb:59: syntax error, unexpected '<'
+app/views/buses/show.html.erb:60: unknown regexp options - dv
+app/views/buses/show.html.erb:62: syntax error, unexpected '<'
+app/views/buses/show.html.erb:63: syntax error, unexpected '<'
+app/views/buses/show.html.erb:63: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/buses/show.html.erb:64: unknown regexp options - dv
+app/views/buses/show.html.erb:65: syntax error, unexpected '<'
+app/views/buses/show.html.erb:66: syntax error, unexpected '<'
+app/views/buses/show.html.erb:67: unknown regexp options - dv
+app/views/buses/show.html.erb:68: syntax error, unexpected '<'
+app/views/buses/show.html.erb:69: syntax error, unexpected '<'
+app/views/buses/show.html.erb:69: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/buses/show.html.erb:70: unknown regexp options - dv
+app/views/buses/show.html.erb:71: syntax error, unexpected '<'
+app/views/buses/show.html.erb:72: syntax error, unexpected '<'
+app/views/buses/show.html.erb:73: unknown regexp options - dv
+app/views/buses/show.html.erb:74: syntax error, unexpected '<'
+app/views/buses/show.html.erb:75: syntax error, unexpected '<'
+app/views/buses/show.html.erb:75: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/views/buses/show.html.erb:76: syntax error, unexpected '<'
+app/views/buses/show.html.erb:78: unknown regexp options - labl
+app/views/buses/show.html.erb:79: syntax error, unexpected '<'
+app/views/buses/show.html.erb:83: unknown regexp options - dv
+app/views/buses/show.html.erb:84: syntax error, unexpected '<'
+app/views/buses/show.html.erb:85: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/buses/show.html.erb:86: syntax error, unexpected '<', expecting ')'
+app/views/buses/show.html.erb:89: unknown regexp options - dv
+app/views/buses/show.html.erb:90: syntax error, unexpected '<'
+app/views/buses/show.html.erb:91: syntax error, unexpected '<'
+app/views/buses/show.html.erb:92: unknown regexp options - dv
+app/views/buses/show.html.erb:93: syntax error, unexpected '<'
+app/views/buses/show.html.erb:94: unknown regexp options - dv
+app/views/buses/show.html.erb:95: syntax error, unexpected '<'
+app/views/buses/show.html.erb:96: unknown regexp options - dv
+app/views/buses/show.html.erb:97: syntax error, unexpected '<'
+app/views/buses/show.html.erb:97: unterminated regexp meets end of file
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (680.5ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (217.1ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (23.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2234.5ms)
+Started GET "/buses/1" for 127.0.0.1 at 2018-05-08 13:37:29 -0700
+Processing by BusesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBus Load (1.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buses/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered buses/show.html.erb within layouts/application (53.0ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3422ms (Views: 3377.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/buses/1" for 127.0.0.1 at 2018-05-08 13:38:14 -0700
+Processing by BusesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBus Load (1.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buses/show.html.erb within layouts/application
+  Rendered buses/show.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3428ms (Views: 3384.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/buses/1" for 127.0.0.1 at 2018-05-08 13:39:06 -0700
+Processing by BusesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBus Load (1.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buses/show.html.erb within layouts/application
+  Rendered buses/show.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3536ms (Views: 3494.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/buses/1" for 127.0.0.1 at 2018-05-08 13:39:30 -0700
+Processing by BusesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBus Load (1.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buses/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered buses/show.html.erb within layouts/application (50.0ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3422ms (Views: 3367.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/buses/1" for 127.0.0.1 at 2018-05-08 13:40:33 -0700
+Processing by BusesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBus Load (1.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buses/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered buses/show.html.erb within layouts/application (41.0ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3509ms (Views: 3466.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/buses/1" for 127.0.0.1 at 2018-05-08 13:41:12 -0700
+Processing by BusesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBus Load (1.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buses/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered buses/show.html.erb within layouts/application (28.0ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3448ms (Views: 3403.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/buses/1" for 127.0.0.1 at 2018-05-08 13:41:57 -0700
+Processing by BusesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBus Load (1.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buses/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered buses/show.html.erb within layouts/application (41.0ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3426ms (Views: 3384.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/buses/1" for 127.0.0.1 at 2018-05-08 13:43:38 -0700
+Processing by BusesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBus Load (2.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buses/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered buses/show.html.erb within layouts/application (34.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3493ms (Views: 3427.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/buses/1" for 127.0.0.1 at 2018-05-08 13:44:41 -0700
+Processing by BusesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBus Load (1.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buses/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered buses/show.html.erb within layouts/application (48.0ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3484ms (Views: 3438.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/buses/1" for 127.0.0.1 at 2018-05-08 13:47:17 -0700
+Processing by BusesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBus Load (1.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buses/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered buses/show.html.erb within layouts/application (43.0ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3593ms (Views: 3539.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/buses/1" for 127.0.0.1 at 2018-05-08 13:50:25 -0700
+Processing by BusesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBus Load (1.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buses/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered buses/show.html.erb within layouts/application (767.5ms)
+Completed 500 Internal Server Error in 909ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `bus' for #<#<Class:0xae7abb0>:0xb64f9c0>):
+    75:             <label class="my_label">Morning End Time:</label>
+    76:           </div>
+    77:           <div class="col-md-6">
+    78:             <% @met = bus.morning_end_time.to_s %>
+    79:             <% @met = @met.tr('UTC', '')%>
+    80:             <label class="my_value"> <%= @met %> </label>
+    81:           </div>
+  
+app/views/buses/show.html.erb:78:in `_app_views_buses_show_html_erb__333599546_93058200'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (428.3ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (108.1ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1839.2ms)
+Started GET "/buses/1" for 127.0.0.1 at 2018-05-08 13:50:57 -0700
+Processing by BusesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBus Load (1.0ms)[0m  [1m[34mSELECT  "buses".* FROM "buses" WHERE "buses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buses/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered buses/show.html.erb within layouts/application (54.0ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3394ms (Views: 3339.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/buses" for 127.0.0.1 at 2018-05-08 13:51:05 -0700
+Processing by BusesController#index as HTML
+  Rendering buses/index.html.erb within layouts/application
+  [1m[36mBus Load (2.0ms)[0m  [1m[34mSELECT "buses".* FROM "buses"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered buses/index.html.erb within layouts/application (109.1ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3488ms (Views: 3450.6ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:53:10 -0700
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 3369ms (Views: 3300.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:56:40 -0700
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."role" = ?[0m  [["role", 1]]
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from index at C:/Sites/BusSystem/app/controllers/homes_controller.rb:5)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from index at C:/Sites/BusSystem/app/controllers/homes_controller.rb:5)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from index at C:/Sites/BusSystem/app/controllers/homes_controller.rb:5)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from index at C:/Sites/BusSystem/app/controllers/homes_controller.rb:5)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "buses"[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "buses" WHERE "buses"."status" = ?[0m  [["status", "t"]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "buses" WHERE "buses"."status" = ?[0m  [["status", "f"]]
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 72330ms (Views: 71944.3ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 13:58:12 -0700
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."role" = ?[0m  [["role", 1]]
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from index at C:/Sites/BusSystem/app/controllers/homes_controller.rb:5)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from index at C:/Sites/BusSystem/app/controllers/homes_controller.rb:5)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from index at C:/Sites/BusSystem/app/controllers/homes_controller.rb:5)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To use the new behavior, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from index at C:/Sites/BusSystem/app/controllers/homes_controller.rb:5)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "buses"[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "buses" WHERE "buses"."status" = ?[0m  [["status", "t"]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "buses" WHERE "buses"."status" = ?[0m  [["status", "f"]]
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 3469ms (Views: 3105.0ms | ActiveRecord: 12.0ms)
+
+

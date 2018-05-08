@@ -8,6 +8,7 @@ class CreateBuses < ActiveRecord::Migration[5.0]
       t.time :evening_end_time
       t.time :morning_start_time
       t.time :morning_end_time
+      t.string :bus_number
       t.boolean :status, default: true
       t.integer :user_id
 

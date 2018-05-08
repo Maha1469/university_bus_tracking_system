@@ -20,13 +20,15 @@ ActiveRecord::Schema.define(version: 20180506192723) do
     t.time     "evening_end_time"
     t.time     "morning_start_time"
     t.time     "morning_end_time"
-    t.boolean  "status"
+    t.string   "bus_number"
+    t.boolean  "status",             default: true
     t.integer  "user_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
   end
 
   create_table "users", force: :cascade do |t|
+    t.integer  "role",                   default: 0
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
