@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180506192723) do
+ActiveRecord::Schema.define(version: 20180511183619) do
 
   create_table "buses", force: :cascade do |t|
     t.float    "current_lat"
@@ -25,6 +25,19 @@ ActiveRecord::Schema.define(version: 20180506192723) do
     t.integer  "user_id"
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
+  end
+
+  create_table "students", force: :cascade do |t|
+    t.string   "name"
+    t.string   "roll_number"
+    t.string   "batch_number"
+    t.integer  "semester"
+    t.string   "department"
+    t.boolean  "approve"
+    t.integer  "user_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["user_id"], name: "index_students_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
